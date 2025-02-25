@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Seat</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f8ff; color: #222; }
+        nav { background: #0077b6; color: white; padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px; }
+        .container { padding: 20px; text-align: center; }
+        h1 { color: #023e8a; font-size: 36px; }
+        h2 { color: #0077b6; font-size: 28px; }
+        form { max-width: 400px; margin: auto; background: #caf0f8; padding: 25px; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        form input, form select, form textarea { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #0077b6; border-radius: 8px; font-size: 14px; }
+        form button { background: #0077b6; color: white; padding: 12px; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; cursor: pointer; transition: background 0.3s ease; }
+        form button:hover { background: #023e8a; }
+        .images { text-align: center; }
+        .images img { width: 220px; margin: 12px; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        button.next { background: #48cae4; color: white; padding: 12px 20px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s ease; }
+        button.next:hover { background: #0096c7; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#personal-details">Personal Details</a>
+        <a href="#project-details">Project Details</a>
+        <a href="#reviews">Reviews</a>
+    </nav>
+    <div id="personal-details" class="container">
+        <h1>Personal Details</h1>
+        <form onsubmit="event.preventDefault(); window.location='#project-details';">
+            <input type="text" placeholder="Name" required>
+            <input type="date" placeholder="Birthdate" required>
+            <input type="tel" placeholder="Mobile Number" required>
+            <input type="number" placeholder="Age" required>
+            <select required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <p>Would you be interested in being part of an innovative project that prioritizes safety and survival in times of disaster?</p>
+            <select required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="project-details" class="container">
+        <h1>Suraksha Seat</h1>
+        <h2>Where Comfort Meets Innovation</h2>
+        <div class="images"><img src="Image1.jpeg" alt="Suraksha Seat"></div>
+        <p>The Suraksha Seat is a revolutionary safety chair designed to protect individuals during natural disasters such as earthquakes, fires, and gas leaks. It seamlessly combines comfort and innovation, transforming from a normal-looking chair into a life-saving protective pod when danger is detected.1. Advanced Hazard Detection Sensors
+Key Features & Functionality:
+- Seismic Sensor: Detects tectonic movements, activating during earthquakes.
+- CO₂ & Smoke Detector: Identifies fire and toxic gas presence.
+- Temperature & Humidity Sensor: Monitors extreme wheezing risks.
+- AI-based Risk Assessment: Analyzes multiple signals to ensure timely action.
+2. Transformation Mechanism:
+The chair detects danger and automatically encloses the occupant in a shockproof, fire-resistant pod.
+Hidden compartments in the base and sides unfold using hydraulic or mechanical arms for rapid transformation.</p>
+        <div class="images"><img src="Image2.jpeg" alt="Suraksha Seat in Action"></div>
+        <p>3. Built-in Survival Support:
+- Oxygen Supply System: Provides breathable air for extended periods.
+- Emergency Food & Water Storage: Contains essential rations.
+- Ventilation & Air Filtration: Ensures airflow while blocking smoke and toxins.
+- GPS & Communication System: Sends rescue alerts with the occupant’s location.
+- Shock-Absorbing Interior: Reduces impact from external forces.
+4. Post-Disaster Safety & Rescue:
+- The pod automatically opens when the danger subsides.
+- Sends a distress signal for emergency responders to locate the occupant.Ideal for Use In
+Offices & Schools – Provides instant earthquake protection.
+Homes – Ensures fireproof and earthquake-resistant safety.
+Hospitals & Elderly Care – Helps those who may struggle to evacuate quickly.
+Factories & Laboratories – Shields against hazardous gas leaks and explosions.
+With the Suraksha Seat, you get peace of mind knowing you’re prepared for the unexpected. Stay safe, stay secure!</p>
+        <div class="images"><img src="Image3.jpeg" alt="Final Suraksha Seat"></div>
+        <button class="next">Next</button>
+    </div>
+    <div id="reviews" class="container" style="display:none;">
+        <h1>Project Review</h1>
+        <form onsubmit="event.preventDefault(); alert('🎉 Thank you for your valuable feedback! 🎉');">
+            <p>How would you rate the suitability and convenience of our project?</p>
+            <textarea placeholder="We'd love to hear your thoughts..." required></textarea>
+            <p>Your Rating:</p>
+            <select required>
+                <option value="">Select Rating</option>
+                <option value="1">1 Star - Poor</option>
+                <option value="2">2 Stars - Fair</option>
+                <option value="3">3 Stars - Good</option>
+                <option value="4">4 Stars - Very Good</option>
+                <option value="5">5 Stars - Excellent</option>
+            </select>
+            <button type="submit">Submit Your Review</button>
+        </form>
+    </div>
+    <script>
+        function showReviews() {
+            document.getElementById('reviews').style.display = 'block';
+            window.location.hash = 'reviews';
+        }
+        document.querySelector('.next').addEventListener('click', showReviews);
+    </script>
+</body>
+</html>
